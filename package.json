@@ -1,0 +1,68 @@
+{
+    "name": "vscode-mustache-snippets",
+    "displayName": "Mustache Template - Snippets & Autocomplete",
+    "description": "Mustache – snippets & autocomplete for VSCode editor",
+    "version": "1.0.0",
+    "icon": "icon.png",
+    "license": "MIT",
+    "publisher": "imgildev",
+    "author": {
+        "name": "Manuel Gil",
+        "url": "https://github.com/ManuelGil"
+    },
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "css",
+        "html",
+        "mustache",
+        "snippets",
+        "completion",
+        "template"
+    ],
+    "homepage": "https://github.com/ManuelGil/vscode-mustache-snippets",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ManuelGil/vscode-mustache-snippets"
+    },
+    "bugs": {
+        "url": "https://github.com/ManuelGil/vscode-mustache-snippets/issues"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/mustache.json"
+            }
+        ],
+        "languages": [
+            {
+                "id": "html",
+                "aliases": [
+                    "HTML (Mustache)",
+                    "Mustache"
+                ],
+                "extensions": [
+                    ".mustache",
+                    ".mst",
+                    ".mu",
+                    ".stache"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mustache",
+                "scopeName": "source.mustache",
+                "path": "./syntaxes/mustache.tmLanguage.json"
+            }
+        ]
+    }
+}
