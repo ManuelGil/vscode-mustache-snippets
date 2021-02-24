@@ -6,16 +6,23 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.2.0] - 2021-02-23
+
+### Added
+
+- New command "Mustache: New File".
+
 ## [1.1.0] - 2021-02-20
 
 ### Changed
 
--   Fix typos in [README.md](./README.md) and [CHANGELOG.md](./CHANGELOG.md).
+- Fix typos in [README.md](./README.md) and [CHANGELOG.md](./CHANGELOG.md).
 
 ## [1.0.0] - 2021-02-20
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ManuelGil/vscode-mustache-snippets/releases/tag/v1.0.0

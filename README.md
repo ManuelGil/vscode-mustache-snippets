@@ -2,16 +2,17 @@
 
 # Mustache Template - Snippets & Autocomplete
 
-[![GitHub Release](https://img.shields.io/github/v/release/ManuelGil/vscode-mustache-snippets)]()
-[![GitHub Release Date](https://img.shields.io/github/release-date/ManuelGil/vscode-mustache-snippets)]()
+[![Latest Release](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-mustache-snippets?style=flat&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/imgildev.vscode-mustache-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-mustache-snippets)]()
-[![vsm-version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-mustache-snippets?style=flat&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
 
 Snippets, autocomplete and syntax for Mustache language
 
 ## Usage
 
-![Snippets](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/readme/snippets.gif)
+### Snippets
+
+![snippets](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/readme/snippets.gif)
 
 Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is a list of the most important shortcuts.
 
@@ -25,6 +26,10 @@ include                 {{> template }}
 extends                 {{< template }}
 loop                    {{# name }} {{ . }} {{/ name }}
 ```
+
+### Commands
+
+![commands](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/readme/commands.gif)
 
 ## Requirements
 
