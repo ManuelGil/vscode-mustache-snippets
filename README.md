@@ -8,6 +8,10 @@
 
 Snippets, autocomplete and syntax for Mustache language
 
+## Other plugins
+
+- [Moodle Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-moodle-snippets)
+
 ## Usage
 
 ### Snippets
@@ -16,16 +20,15 @@ Snippets, autocomplete and syntax for Mustache language
 
 Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is a list of the most important shortcuts.
 
-```mustache
-layout                  html template
-block                   {{$ name }} ... {{/ name }}
-section                 {{# name }} ... {{/ name }}
-inverted section        {{^ name }} ... {{/ name }}
-comment                 {{! name }}
-include                 {{> template }}
-extends                 {{< template }}
-loop                    {{# name }} {{ . }} {{/ name }}
-```
+| Snippet          | Purpose                        |
+| ---------------- | ------------------------------ |
+| layout           | html template                  |
+| block            | {{$ name }} ... {{/ name }}    |
+| section          | {{# name }} ... {{/ name }}    |
+| inverted section | {{^ name }} ... {{/ name }}    |
+| comment          | {{! comment }}                 |
+| include          | {{> template }}                |
+| extends          | {{< template }}                |
 
 ### Commands
 

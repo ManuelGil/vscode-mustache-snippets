@@ -1,9 +1,8 @@
 {
     "block": {
         "prefix": [
-            "block",
-            "{{$ }}",
-            "{{$"
+            "{{$",
+            "block"
         ],
         "body": [
             "{{$ ${name} }}",
@@ -14,53 +13,52 @@
     },
     "section": {
         "prefix": [
-            "section",
-            "{{# }}",
-            "{{#"
+            "{{#",
+            "section"
         ],
         "body": [
             "{{# ${name} }}",
             "\t$1",
             "{{/ ${name} }}"
         ],
-        "description": "When a template uses inheritance and if you want to print a block multiple times, use the block function"
+        "description": "The section statement in Mustache is comparable with the if statements of PHP"
     },
     "inverted section": {
         "prefix": [
-            "inverted section",
-            "{{^ }}",
-            "{{^"
+            "{{^",
+            "inverted section"
         ],
         "body": [
             "{{^ ${condition} }}",
             "\t$2",
             "{{/ ${condition} }}"
         ],
-        "description": "The if statement in Mustache is comparable with the if statements of PHP"
+        "description": "The inverted section statement in Mustache is comparable with the else statements of PHP"
     },
     "comment": {
         "prefix": [
-            "comment",
-            "{{! }}",
-            "{{!"
+            "{{!",
+            "comment"
         ],
-        "body": "{{! $1 }}",
-        "description": "{{! }}"
+        "body": [
+            "{{!",
+            "\t$1",
+            "}}"
+        ],
+        "description": "Mustache snippets"
     },
     "include": {
         "prefix": [
-            "include",
-            "{{> }}",
-            "{{>"
+            "{{>",
+            "include"
         ],
         "body": "{{> ${filename} }}",
         "description": "The include statement includes a template and returns the rendered content of that file into the current namespace"
     },
     "extends": {
         "prefix": [
-            "extends",
-            "{{< }}",
-            "{{<"
+            "{{<",
+            "extends"
         ],
         "body": "{{< ${filename} }}",
         "description": "Mustache snippets"
