@@ -1,19 +1,35 @@
-const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
+const vscode = require('vscode');
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	let mustache_new_file = vscode.commands.registerCommand('vscode-mustache-snippets.file', function () {
-		vscode.window.showInputBox({
-			prompt: "Filename",
-			placeHolder: "Filename"
-		}).then(function (value) {
-			const folder = vscode.workspace.workspaceFolders[0].uri.fsPath;
-			const filename = value.endsWith('.mustache') ? value : `${value}.mustache`;
+  const mustache_new_file = vscode.commands.registerCommand('vscode-mustache-snippets.file', function () {
+    vscode.window
+      .showInputBox({
+        prompt: 'Filename',
+        placeHolder: 'Filename',
+        validateInput: (text) => {
+          if (!/^[\w,\s-\/.]+$/.test(text)) {
+            return 'Invalid format!';
+          }
+        },
+      })
+      .then(function (value) {
+        let folder;
 
-			const content = `{{! ${filename}  }}
+        if (vscode.workspace.workspaceFolders) {
+          folder = vscode.workspace.workspaceFolders[0].uri.fsPath;
+        } else {
+          vscode.window.showErrorMessage('The file has not been created!');
+          return;
+        }
+
+        const filename = value.endsWith('.mustache') ? value : `${value}.mustache`;
+
+        const content = `{{! ${filename}  }}
 {{% BLOCKS }}
 <!DOCTYPE html>
 <html lang=\"en\">
@@ -44,33 +60,37 @@ function activate(context) {
 </html>
 `;
 
-			const pathfile = path.join(folder, filename);
+        const pathfile = path.join(folder, filename);
 
-			fs.access(pathfile, function (err) {
-				if (err) {
-					fs.open(pathfile, "w+", function (err, fd) {
-						if (err) throw err;
-						fs.writeFileSync(fd, content);
-						const openPath = vscode.Uri.file(pathfile);
-						vscode.workspace.openTextDocument(openPath).then(function (filename) {
-							vscode.window.showTextDocument(filename);
-						});
-					});
+        if (!fs.existsSync(path.dirname(pathfile))) {
+          fs.mkdirSync(path.dirname(pathfile));
+        }
 
-					vscode.window.showInformationMessage('Successfully created the file!');
-				} else {
-					vscode.window.showWarningMessage("Name already exist!");
-				}
-			});
-		});
-	});
+        fs.access(pathfile, function (err) {
+          if (err) {
+            fs.open(pathfile, 'w+', function (err, fd) {
+              if (err) throw err;
+              fs.writeFileSync(fd, content);
+              const openPath = vscode.Uri.file(pathfile);
+              vscode.workspace.openTextDocument(openPath).then(function (filename) {
+                vscode.window.showTextDocument(filename);
+              });
+            });
 
-	context.subscriptions.push(mustache_new_file);
+            vscode.window.showInformationMessage('Successfully created the file!');
+          } else {
+            vscode.window.showWarningMessage('Name already exist!');
+          }
+        });
+      });
+  });
+
+  context.subscriptions.push(mustache_new_file);
 }
 
-function deactivate() { }
+function deactivate() {}
 
 module.exports = {
-	activate,
-	deactivate
-}
+  activate,
+  deactivate,
+};

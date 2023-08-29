@@ -1,9 +1,8 @@
 ![icon](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/icon.png)
 
-# Mustache Template - Snippets & Autocomplete
+# {{ mustache }} for VSCode
 
 [![Latest Release](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-mustache-snippets?style=flat&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/imgildev.vscode-mustache-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-mustache-snippets)]()
 
 Snippets, autocomplete and syntax for Mustache language

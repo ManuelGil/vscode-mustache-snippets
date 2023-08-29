@@ -1,117 +1,131 @@
 {
-    "name": "vscode-mustache-snippets",
-    "displayName": "Mustache Template - Snippets & Autocomplete",
-    "description": "Mustache – snippets & autocomplete for VSCode editor",
-    "version": "1.2.1",
-    "icon": "icon.png",
-    "license": "MIT",
-    "publisher": "imgildev",
-    "author": {
-        "name": "Manuel Gil",
-        "url": "https://github.com/ManuelGil"
-    },
-    "engines": {
-        "vscode": "^1.53.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets",
-        "Formatters",
-        "Keymaps",
-        "Other"
+  "name": "vscode-mustache-snippets",
+  "displayName": "Mustache Template Engine - Snippets & Autocomplete",
+  "description": "Mustache – snippets & autocomplete for VSCode editor",
+  "version": "1.3.0",
+  "icon": "icon.png",
+  "license": "MIT",
+  "publisher": "imgildev",
+  "author": {
+    "name": "Manuel Gil",
+    "url": "https://github.com/ManuelGil"
+  },
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Keymaps",
+    "Other"
+  ],
+  "keywords": [
+    "autocomplete",
+    "autocomplete-functionality",
+    "commands",
+    "completion",
+    "grammars",
+    "grammars-utility",
+    "latam",
+    "mustache",
+    "mustache-implementations",
+    "mustache-template",
+    "mustache-templates",
+    "mustache-templating",
+    "mustache-template-engine",
+    "mustachejs",
+    "snippets",
+    "snippets-collection",
+    "snippets-collections",
+    "snippets-library",
+    "snippets-plugin",
+    "syntax",
+    "template",
+    "template-engine",
+    "template-language",
+    "template-matching"
+  ],
+  "homepage": "https://github.com/ManuelGil/vscode-mustache-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ManuelGil/vscode-mustache-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/ManuelGil/vscode-mustache-snippets/issues"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/mustache.json"
+      }
     ],
-    "keywords": [
-        "autocomplete",
-        "autocomplete-functionality",
-        "commands",
-        "completion",
-        "grammars",
-        "grammars-utility",
-        "latam",
-        "mustache",
-        "mustache-implementations",
-        "mustache-templates",
-        "mustache-templating",
-        "mustachejs",
-        "snippets",
-        "snippets-collection",
-        "snippets-collections",
-        "snippets-library",
-        "snippets-plugin",
-        "syntax",
-        "template",
-        "template-language",
-        "template-matching"
+    "languages": [
+      {
+        "id": "html",
+        "aliases": [
+          "HTML (Mustache)",
+          "Mustache"
+        ],
+        "extensions": [
+          ".mustache",
+          ".mst",
+          ".mu",
+          ".stache"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "homepage": "https://github.com/ManuelGil/vscode-mustache-snippets",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ManuelGil/vscode-mustache-snippets"
-    },
-    "bugs": {
-        "url": "https://github.com/ManuelGil/vscode-mustache-snippets/issues"
-    },
-    "activationEvents": [
-        "*"
+    "grammars": [
+      {
+        "language": "mustache",
+        "scopeName": "source.mustache",
+        "path": "./syntaxes/mustache.tmLanguage.json"
+      }
     ],
-    "main": "./extension.js",
-    "contributes": {
-        "snippets": [
-            {
-                "language": "html",
-                "path": "./snippets/mustache.json"
-            }
-        ],
-        "languages": [
-            {
-                "id": "html",
-                "aliases": [
-                    "HTML (Mustache)",
-                    "Mustache"
-                ],
-                "extensions": [
-                    ".mustache",
-                    ".mst",
-                    ".mu",
-                    ".stache"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "mustache",
-                "scopeName": "source.mustache",
-                "path": "./syntaxes/mustache.tmLanguage.json"
-            }
-        ],
-        "commands": [
-            {
-                "command": "vscode-mustache-snippets.file",
-                "title": "Mustache: New File"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "vscode-mustache-snippets.file",
-                "key": "ctrl+alt+m"
-            }
-        ]
-    },
-    "scripts": {
-        "lint": "eslint .",
-        "pretest": "npm run lint",
-        "test": "node ./test/runTest.js"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.53.0",
-        "@types/glob": "^7.1.3",
-        "@types/mocha": "^8.0.4",
-        "@types/node": "^12.11.7",
-        "eslint": "^7.19.0",
-        "glob": "^7.1.6",
-        "mocha": "^8.2.1",
-        "typescript": "^4.1.3",
-        "vscode-test": "^1.5.0"
-    }
+    "commands": [
+      {
+        "command": "vscode-mustache-snippets.file",
+        "title": "Mustache: New File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-mustache-snippets.file",
+        "key": "ctrl+alt+m"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint --ext .js ./ --fix",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.53.0",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "glob": "^7.1.6",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "mocha": "^8.3.0",
+    "prettier": "3.0.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  },
+  "lint-staged": {
+    "*.(js)": "npm run lint"
+  }
 }

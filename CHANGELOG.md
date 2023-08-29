@@ -1,10 +1,16 @@
 # Change Log
 
-All notable changes to the "Mustache Engine Snippets" extension will be documented in this file.
+All notable changes to the "{{ mustache }} for VSCode" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## [Unreleased]
+
+## [1.3.0] - 2021-08-28
+
+### Added
+
+- Add Folder validations.
 
 ## [1.2.1] - 2021-02-26
 
@@ -28,7 +34,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.2.1...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.0.0...v1.1.0
