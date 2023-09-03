@@ -12,7 +12,7 @@ function activate(context) {
         prompt: 'Filename',
         placeHolder: 'Filename',
         validateInput: (text) => {
-          if (!/^[\w,\s-\/.]+$/.test(text)) {
+          if (!/^[A-Za-z0-9][\w\s\/,.-]+$/.test(text)) {
             return 'Invalid format!';
           }
         },
@@ -63,7 +63,7 @@ function activate(context) {
         const pathfile = path.join(folder, filename);
 
         if (!fs.existsSync(path.dirname(pathfile))) {
-          fs.mkdirSync(path.dirname(pathfile));
+          fs.mkdirSync(path.dirname(pathfile), { recursive: true });
         }
 
         fs.access(pathfile, function (err) {
