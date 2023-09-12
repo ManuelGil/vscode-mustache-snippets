@@ -1,5 +1,5 @@
 {
-  "name": "Mustache",
+  "name": "Mustache (HTML)",
   "scopeName": "source.mustache",
   "fileTypes": ["mustache", "mst", "mu", "stache"],
   "uuid": "93706aaa-9b66-4e9e-bb64-31a8ffcfb00d",
@@ -15,6 +15,9 @@
     },
     {
       "include": "#partials"
+    },
+    {
+      "include": "text.html.basic"
     }
   ],
   "repository": {

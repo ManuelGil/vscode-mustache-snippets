@@ -2,7 +2,7 @@
   "name": "vscode-mustache-snippets",
   "displayName": "Mustache Template Engine - Snippets & Autocomplete",
   "description": "Mustache – snippets & autocomplete for VSCode editor",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "icon": "icon.png",
   "license": "MIT",
   "publisher": "imgildev",
@@ -64,16 +64,15 @@
   "contributes": {
     "snippets": [
       {
-        "language": "html",
-        "path": "./snippets/mustache.json"
+        "path": "./snippets/mustache.code-snippets"
       }
     ],
     "languages": [
       {
-        "id": "html",
+        "id": "mustache",
         "aliases": [
-          "HTML (Mustache)",
-          "Mustache"
+          "Mustache (HTML)",
+          "mustache"
         ],
         "extensions": [
           ".mustache",
