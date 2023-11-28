@@ -7,15 +7,15 @@
 
 Snippets, autocomplete and syntax for Mustache language
 
-## Other plugins
+## Requirements
 
-- [Moodle Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-moodle-snippets)
+- VSCode 1.46.0 or later
 
 ## Usage
 
 ### Snippets
 
-![snippets](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/readme/snippets.gif)
+![snippets](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/images/snippets.gif)
 
 Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is a list of the most important shortcuts.
 
@@ -31,11 +31,15 @@ Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is 
 
 ### Commands
 
-![commands](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/readme/commands.gif)
+![commands](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/images/commands.gif)
 
-## Requirements
+## Other extensions
 
-- VSCode 1.53.0 or later
+- [Mustache Template Engine - Snippets & Autocomplete](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
+- [Moodle Pack](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-moodle-snippets)
+- [CodeIgniter 4 Snippets for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-snippets)
+- [CodeIgniter 4 Spark for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-spark)
+- [NestJS Snippets for VSCode Editor](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-snippets-extension)
 
 ## Changelog
 

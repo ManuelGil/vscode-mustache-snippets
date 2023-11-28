@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [2.0.1] - 2021-11-27
+
+### Fixed
+
+- Fix README.md.
+
 ## [2.0.0] - 2021-09-12
 
 ### Changed
@@ -46,7 +52,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.4.0...v2.0.0
 [1.4.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.2.1...v1.3.0
