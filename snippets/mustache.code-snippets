@@ -1,49 +1,49 @@
 {
   "block": {
     "prefix": ["{{$", "block"],
-    "scope": "plaintext,html,mustache",
-    "body": ["{{$ ${name} }}", "\t$1", "{{/ ${name} }}"],
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": ["{{$ ${1:name} }}", "\t$0", "{{/ ${1:name} }}"],
     "description": "When a template uses inheritance and if you want to print a block multiple times, use the block function"
   },
   "section": {
     "prefix": ["{{#", "section"],
-    "scope": "plaintext,html,mustache",
-    "body": ["{{# ${name} }}", "\t$1", "{{/ ${name} }}"],
-    "description": "The section statement in Mustache is comparable with the if statements of PHP"
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": ["{{# ${1:name} }}", "\t$0", "{{/ ${1:name} }}"],
+    "description": "The section statement in Mustache is comparable with the if statements"
   },
   "inverted section": {
     "prefix": ["{{^", "inverted section"],
-    "scope": "plaintext,html,mustache",
-    "body": ["{{^ ${condition} }}", "\t$2", "{{/ ${condition} }}"],
-    "description": "The inverted section statement in Mustache is comparable with the else statements of PHP"
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": ["{{^ ${1:condition} }}", "\t$0", "{{/ ${1:condition} }}"],
+    "description": "The inverted section statement in Mustache is comparable with the else statements"
   },
   "comment": {
     "prefix": ["{{!", "comment"],
-    "scope": "plaintext,html,mustache",
-    "body": ["{{!", "\t$1", "}}"],
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": ["{{!", "\t$0", "}}"],
     "description": "Mustache snippets"
   },
   "include": {
     "prefix": ["{{>", "include"],
-    "scope": "plaintext,html,mustache",
-    "body": "{{> ${filename} }}",
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": "{{> ${1:filename} }}",
     "description": "The include statement includes a template and returns the rendered content of that file into the current namespace"
   },
   "extends": {
     "prefix": ["{{<", "extends"],
-    "scope": "plaintext,html,mustache",
-    "body": "{{< ${filename} }}",
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": "{{< ${1:filename} }}",
     "description": "Mustache snippets"
   },
   "loop": {
     "prefix": "loop",
-    "scope": "plaintext,html,mustache",
-    "body": ["{{# ${array} }}", "\t{{ . }}", "{{/ ${array} }}"],
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
+    "body": ["{{# ${1:array} }}", "\t{{ . }}", "{{/ ${1:array} }}"],
     "description": "Loop over each item in a sequence"
   },
   "layout": {
     "prefix": "layout",
-    "scope": "plaintext,html,mustache",
+    "scope": "plaintext,html,mustache,javascript,typescriptreact",
     "body": ["{{% BLOCKS }}", "<!DOCTYPE html>", "<html lang=\"en\">", "<html>", "\t<head>", "\t\t<meta charset=\"UTF-8\">", "\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">", "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">", "\t\t<title>{{$ title }}My Awesome Site{{/ title }}</title>", "\t\t{{$ stylesheets }}", "\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/default.css\">", "\t\t{{/ stylesheets }}", "\t</head>", "\t\t<header>", "\t\t\t{{$ header }}", "\t\t\t\t<h1>Welcome to My Awesome Site</h1>", "\t\t\t{{/ header }}", "\t\t</header>", "\t\t<div id=\"content\">", "\t\t\t{{$ content }}", "\t\t\t\t<p>Hello, World!</p>", "\t\t\t{{/ content }}", "\t\t</div>", "\t\t{{$ scripts }}", "\t\t\t<script src=\"/assets/js/default.js\"></script>", "\t\t{{/ scripts }}", "\t</body>", "</html>"],
     "description": "Mustache snippets"
   }
