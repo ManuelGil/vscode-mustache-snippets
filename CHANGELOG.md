@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [2.1.1] - 2021-12-12
+
+### Fixed
+
+- Fix JavaScript JSX compatibility.
+
 ## [2.1.0] - 2021-12-10
 
 ### Added
@@ -58,7 +64,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.1.1...HEAD
+[2.1.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v1.4.0...v2.0.0
