@@ -92,6 +92,9 @@
     "snippets": [
       {
         "path": "./snippets/mustache.code-snippets"
+      },
+      {
+        "path": "./snippets/html.code-snippets"
       }
     ],
     "languages": [
