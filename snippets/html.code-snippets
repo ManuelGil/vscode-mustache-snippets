@@ -373,5 +373,135 @@
     "prefix": "video",
     "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
     "body": "<video src=\"$1\" controls>$0</video>"
+  },
+  "dd": {
+    "prefix": "dd",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<dd>$0</dd>"
+  },
+  "dt": {
+    "prefix": "dt",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<dt>$0</dt>"
+  },
+  "figcaption": {
+    "prefix": "figcaption",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<figcaption>$0</figcaption>"
+  },
+  "li": {
+    "prefix": "li",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<li>$0</li>"
+  },
+  "p": {
+    "prefix": "p",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<p>$0</p>"
+  },
+  "pre": {
+    "prefix": "pre",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<pre>$0</pre>"
+  },
+  "abbr": {
+    "prefix": "abbr",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<abbr title=\"$1\">$0</abbr>"
+  },
+  "cite": {
+    "prefix": "cite",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<cite>$0</cite>"
+  },
+  "code": {
+    "prefix": "code",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<code>$0</code>"
+  },
+  "mark": {
+    "prefix": "mark",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<mark>$0</mark>"
+  },
+  "small": {
+    "prefix": "small",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<small>$0</small>"
+  },
+  "span": {
+    "prefix": "span",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<span>$0</span>"
+  },
+  "strong": {
+    "prefix": "strong",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<strong>$0</strong>"
+  },
+  "time": {
+    "prefix": "time",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<time datetime=\"$1\">$0</time>"
+  },
+  "track": {
+    "prefix": "track",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<track src=\"$1\" kind=\"$2\" srclang=\"$3\" label=\"$4\">"
+  },
+  "del": {
+    "prefix": "del",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<del>$0</del>"
+  },
+  "ins": {
+    "prefix": "ins",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<ins>$0</ins>"
+  },
+  "caption": {
+    "prefix": "caption",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<caption>$0</caption>"
+  },
+  "table-colgroup": {
+    "prefix": "table-colgroup",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["<table>", "\t<colgroup>", "\t\t<col span=\"$1\">", "\t</colgroup>", "</table>"]
+  },
+  "datalist": {
+    "prefix": "datalist",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<datalist id=\"$1\">$0</datalist>"
+  },
+  "fieldset": {
+    "prefix": "fieldset",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<fieldset>$0</fieldset>"
+  },
+  "legend": {
+    "prefix": "legend",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<legend>$0</legend>"
+  },
+  "progress": {
+    "prefix": "progress",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<progress value=\"$1\" max=\"$2\">$0</progress>"
+  },
+  "select-optgroup": {
+    "prefix": "select-optgroup",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": ["<select>", "\t<optgroup label=\"$1\">", "\t\t<option value=\"$2\">$3</option>", "\t</optgroup>", "</select>"]
+  },
+  "details": {
+    "prefix": "details",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<details>$0</details>"
+  },
+  "summary": {
+    "prefix": "summary",
+    "scope": "plaintext,html,mustache,javascript,javascriptreact,typescript,typescriptreact",
+    "body": "<summary>$0</summary>"
   }
 }
