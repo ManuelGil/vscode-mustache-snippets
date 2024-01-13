@@ -6,61 +6,77 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-## [2.3.2] - 2021-12-30
+## [2.4.0] - 2024-01-13
+
+### Added
+
+- Add menu item to create a new file.
+- Add configuration for Mustache delimiters.
+- Add menu item to change delimiters.
+
+### Changed
+
+- Move functions to a new file.
+
+### Removed
+
+- Remove keybindings.
+
+## [2.3.2] - 2023-12-30
 
 ### Fixed
 
 - Improve docuemntation.
 
-## [2.3.1] - 2021-12-21
+## [2.3.1] - 2023-12-21
 
 ### Fixed
 
 - Fix duplicate snippets.
 
-## [2.3.0] - 2021-12-12
+## [2.3.0] - 2023-12-12
 
 ### Added
 
 - Add new HTML snippets.
 
-## [2.2.0] - 2021-12-12
+## [2.2.0] - 2023-12-12
 
 ### Added
 
 - Add HTML snippets.
 
-## [2.1.1] - 2021-12-12
+## [2.1.1] - 2023-12-12
 
 ### Fixed
 
 - Fix JavaScript JSX compatibility.
 
-## [2.1.0] - 2021-12-10
+## [2.1.0] - 2023-12-10
 
 ### Added
 
 - Add React compatibility.
 
-## [2.0.1] - 2021-11-27
+## [2.0.1] - 2023-11-27
 
 ### Fixed
 
 - Fix README.md.
 
-## [2.0.0] - 2021-09-12
+## [2.0.0] - 2023-09-12
 
 ### Changed
 
 - Change language definition.
 
-## [1.4.0] - 2021-09-03
+## [1.4.0] - 2023-09-03
 
 ### Added
 
 - Improve file creation.
 
-## [1.3.0] - 2021-08-28
+## [1.3.0] - 2023-08-28
 
 ### Added
 
@@ -88,7 +104,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.3.2...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.4.0...HEAD
+[2.4.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.3.2...v2.4.0
 [2.3.2]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.3.1...v2.3.2
 [2.3.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.2.0...v2.3.0

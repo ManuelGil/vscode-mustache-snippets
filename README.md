@@ -2,22 +2,20 @@
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/imgildev.vscode-mustache-snippets?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/imgildev.vscode-mustache-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/imgildev.vscode-mustache-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets)
+[![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/imgildev.vscode-mustache-snippets?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-mustache-snippets&ssr=false#review-details)
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/vscode-mustache-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-mustache-snippets)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/vscode-mustache-snippets?style=for-the-badge&logo=github)](https://github.com/ManuelGil/vscode-mustache-snippets/blob/main/LICENSE)
 
-![icon](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/icon.png)
+This is a Visual Studio Code extension that provides robust support for the Mustache template engine. Simplify your workflow by Mustache file editing with advanced features such as syntax highlighting, code completion, customized snippets, and more!
 
-Mustache – snippets & autocomplete for VSCode editor (HTML, JS, PHP, React, etc.). Mustache is a logic-less template syntax. It can be used for HTML, config files, source code – anything. It works by expanding tags in a template using values provided in a hash or object. We call it 'logic-less' because there are no if statements, else clauses, or for loops. Instead, there are only tags. Some tags are replaced with a value, some nothing, and others a series of values. This repo contains the official VSCode extension for Mustache. It includes snippets, syntax highlighting, and code completion.
+![snippets](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/images/snippets.gif)
 
 ## Requirements
 
 - VSCode 1.46.0 or later
 
-## Usage
-
-### Snippets
-
-![snippets](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/images/snippets.gif)
+## Snippets
 
 Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is a list of the most important shortcuts.
 
@@ -29,11 +27,42 @@ Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is 
 | inverted section | {{^ name }} ... {{/ name }}    |
 | comment          | {{! comment }}                 |
 | include          | {{> template }}                |
-| extends          | {{< template }}                |
+| extends          | {{\< template }}               |
 
-### Commands
+## Usage
 
-![commands](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/images/commands.gif)
+![demo](https://raw.githubusercontent.com/ManuelGil/vscode-mustache-snippets/main/images/demo.gif)
+
+- If you want to create a new file, you can select the option `Mustache: Generate New Mustache File` from the command palette. This will create a new file with the extension `.mustache` and will open the file in the editor. If you want to create a new file in a specific folder, you can right-click on the folder and select the option `Generate New Mustache File`. This will create a new file with the extension `.mustache` in the selected folder and will open the file in the editor.
+
+- If you want to change the delimiters, you can select the template section and then select the `Mustache: Change Delimiters` option from the command palette. This will open a dialog box where you can enter the delimiters currently used in the template and the extension will replace the delimiters of the selected section. For example, if you select the section `{{# name }} ... {{{/ name }}` and you need to change the delimiters to `[[` and `]]`, you can select the `Change delimiters` option and this will change the section to `[[# name ]] ... [[/name ]]`.
+
+## Project Settings
+
+Configure your project by creating or updating a settings.json file at the project's root. If you already have a `.vscode/settings.json` file, skip the first two steps.
+
+1. Open the command palette in VSCode:
+   - `CTRL + SHIFT + P` (Windows)
+   - `CMD + SHIFT + P` (Mac OS)
+
+2. Type `Preferences: Open Workspace Settings (JSON)`.
+
+3. In the `.vscode/settings.json` file, copy and paste the following settings:
+
+    ```jsonc
+    {
+      // The delimiters option can be used to change the current template delimiters when generating a new file.
+      // Syntax highlighting or snippets included in the extension will not be affected by this setting.
+      "mustache.delimiters": {
+        "left": "{{",
+        "right": "}}"
+      }
+    }
+    ```
+
+4. **Restart VS Code**
+
+Your project is now set up to automatically format code upon saving.
 
 ## Connect with me
 

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "mustache.delimiters": {
+      "type": "object",
+      "default": {
+        "left": "{{",
+        "right": "}}"
+      },
+      "description": "The delimiters option can be used to change the current template delimiters when generating a new file. Syntax highlighting or fragments included in the extension will not be affected by this setting."
+    }
+  }
+}
