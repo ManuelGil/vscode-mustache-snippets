@@ -17,11 +17,13 @@
       "name": "entity.name.tag.block.mustache",
       "begin": "\\{*\\{(#|\\^|\\$)\\s*([A-Za-z0-9_.]+)\\s*\\}\\}*",
       "beginCaptures": {
-        "1": { "name": "keyword.control.block.start.mustache" }
+        "1": { "name": "keyword.control.block.start.mustache" },
+        "2": { "name": "entity.name.block.mustache" }
       },
       "end": "\\{*\\{/\\s*([A-Za-z0-9_.]+)\\s*\\}\\}*",
       "endCaptures": {
-        "1": { "name": "variable.block.name.mustache" }
+        "0": { "name": "keyword.control.block.end.mustache" },
+        "1": { "name": "variable.block.mustache" }
       },
       "patterns": [
         { "include": "$self" },
@@ -38,16 +40,24 @@
     },
     "logic": {
       "name": "entity.name.tag.logic.mustache",
-      "begin": "\\{*\\{(#)(if|each|key|await)\\s*([A-Za-z0-9_.,?!\\s\\{\\}]+)\\s*\\}\\}*",
+      "begin": "\\{*\\{(#|:)(if|else|each|key|await|then|catch)\\s*(.+)\\s*\\}\\}*",
       "beginCaptures": {
         "1": { "name": "keyword.control.logic.start.mustache" },
         "2": { "name": "keyword.control.logic.type.mustache" }
       },
       "end": "\\{*\\{/(if|each|key|await)\\}\\}*",
       "endCaptures": {
-        "1": { "name": "variable.logic.name.mustache" }
+        "0": { "name": "keyword.control.logic.end.mustache" },
+        "1": { "name": "keyword.control.logic.type.mustache" }
       },
-      "patterns": [{ "include": "$self" }, { "include": "text.html.basic" }]
+      "patterns": [
+        { "include": "$self" },
+        { "include": "#html" },
+        {
+          "name": "string.unquoted.mustache",
+          "match": "."
+        }
+      ]
     },
     "comments": {
       "patterns": [
@@ -66,7 +76,7 @@
       "patterns": [
         {
           "name": "keyword.operator.partial.mustache",
-          "match": "\\{*\\{>\\s*([A-Za-z0-9_.?/\\\\]+)\\s*\\}\\}*",
+          "match": "\\{*\\{>\\s*([A-Za-z0-9_.?/]+)\\s*\\}\\}*",
           "captures": {
             "1": { "name": "entity.name.partial.mustache" }
           }
@@ -77,7 +87,7 @@
       "patterns": [
         {
           "name": "keyword.operator.parent.mustache",
-          "match": "\\{*\\{<\\s*([A-Za-z0-9_.?*/\\\\]+)\\s*\\}\\}*",
+          "match": "\\{*\\{<\\s*([A-Za-z0-9_.?*/]+)\\s*\\}\\}*",
           "captures": {
             "1": { "name": "entity.name.parent.mustache" }
           }
@@ -86,7 +96,7 @@
           "name": "keyword.operator.parent.end.mustache",
           "match": "\\{*\\{/(\\*?\\s*[A-Za-z0-9_.?]+)\\s*\\}\\}*",
           "captures": {
-            "1": { "name": "variable.parent.name.mustache" }
+            "1": { "name": "entity.name.parent.mustache" }
           }
         }
       ]
