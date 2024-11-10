@@ -1,70 +1,118 @@
 {
-  "name": "Mustache (HTML)",
+  "name": "Mustache",
   "scopeName": "source.mustache",
-  "fileTypes": ["mustache", "mst", "mu", "stache"],
+  "fileTypes": [".mst", ".mu", ".mustache", ".stache", ".tmpl"],
   "uuid": "93706aaa-9b66-4e9e-bb64-31a8ffcfb00d",
   "patterns": [
-    {
-      "include": "#variables"
-    },
-    {
-      "include": "#blocks"
-    },
-    {
-      "include": "#comments"
-    },
-    {
-      "include": "#partials"
-    },
-    {
-      "include": "text.html.basic"
-    }
+    { "include": "#blocks" },
+    { "include": "#logic" },
+    { "include": "#comments" },
+    { "include": "#partials" },
+    { "include": "#parents" },
+    { "include": "#variables" },
+    { "include": "#html" }
   ],
   "repository": {
     "blocks": {
-      "name": "entity.name.tag.mustache",
-      "begin": "\\{\\{(#|\\^|\\$)\\s?[A-Za-z0-9_.]+\\s*\\}\\}",
-      "end": "\\{\\{/\\s?[A-Za-z0-9_.]+\\s*\\}\\}",
+      "name": "entity.name.tag.block.mustache",
+      "begin": "\\{*\\{(#|\\^|\\$)\\s*([A-Za-z0-9_.]+)\\s*\\}\\}*",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.block.start.mustache" }
+      },
+      "end": "\\{*\\{/\\s*([A-Za-z0-9_.]+)\\s*\\}\\}*",
+      "endCaptures": {
+        "1": { "name": "variable.block.name.mustache" }
+      },
       "patterns": [
-        {
-          "include": "$self"
-        },
-        {
-          "include": "#variables"
-        },
-        {
-          "include": "text.html.basic"
-        },
+        { "include": "$self" },
+        { "include": "#logic" },
+        { "include": "#comments" },
+        { "include": "#partials" },
+        { "include": "#variables" },
+        { "include": "#html" },
         {
           "name": "string.unquoted.mustache",
           "match": "."
         }
       ]
     },
+    "logic": {
+      "name": "entity.name.tag.logic.mustache",
+      "begin": "\\{*\\{(#)(if|each|key|await)\\s*([A-Za-z0-9_.,?!\\s\\{\\}]+)\\s*\\}\\}*",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.logic.start.mustache" },
+        "2": { "name": "keyword.control.logic.type.mustache" }
+      },
+      "end": "\\{*\\{/(if|each|key|await)\\}\\}*",
+      "endCaptures": {
+        "1": { "name": "variable.logic.name.mustache" }
+      },
+      "patterns": [{ "include": "$self" }, { "include": "text.html.basic" }]
+    },
     "comments": {
-      "name": "comment.mustache",
-      "begin": "\\{\\{!",
-      "end": "\\}\\}"
+      "patterns": [
+        {
+          "name": "comment.line.mustache",
+          "match": "\\{*\\{!\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}*"
+        },
+        {
+          "name": "comment.block.mustache",
+          "begin": "\\{*\\{!",
+          "end": "\\}\\}*"
+        }
+      ]
     },
     "partials": {
       "patterns": [
         {
-          "name": "keyword.operator.mustache",
-          "match": "\\{\\{(>|<)\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}"
+          "name": "keyword.operator.partial.mustache",
+          "match": "\\{*\\{>\\s*([A-Za-z0-9_.?/\\\\]+)\\s*\\}\\}*",
+          "captures": {
+            "1": { "name": "entity.name.partial.mustache" }
+          }
+        }
+      ]
+    },
+    "parents": {
+      "patterns": [
+        {
+          "name": "keyword.operator.parent.mustache",
+          "match": "\\{*\\{<\\s*([A-Za-z0-9_.?*/\\\\]+)\\s*\\}\\}*",
+          "captures": {
+            "1": { "name": "entity.name.parent.mustache" }
+          }
+        },
+        {
+          "name": "keyword.operator.parent.end.mustache",
+          "match": "\\{*\\{/(\\*?\\s*[A-Za-z0-9_.?]+)\\s*\\}\\}*",
+          "captures": {
+            "1": { "name": "variable.parent.name.mustache" }
+          }
         }
       ]
     },
     "variables": {
       "patterns": [
         {
-          "name": "entity.name.tag.mustache",
-          "match": "\\{\\{\\{\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}\\}"
+          "name": "entity.name.variable.triple.mustache",
+          "match": "\\{*\\{\\{\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}\\}*"
         },
         {
-          "name": "entity.name.tag.mustache",
-          "match": "\\{\\{\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}"
+          "name": "entity.name.variable.double.mustache",
+          "match": "\\{*\\{\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}*"
+        },
+        {
+          "name": "constant.character.escape.mustache",
+          "match": "\\{*\\{&\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}*",
+          "captures": {
+            "0": { "name": "constant.character.escape.mustache" },
+            "1": { "name": "variable.escaped.mustache" }
+          }
         }
       ]
+    },
+    "html": {
+      "patterns": [{ "include": "text.html.basic" }]
     }
   }
 }

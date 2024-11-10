@@ -44,7 +44,36 @@
   "layout": {
     "prefix": "layout",
     "scope": "html,mustache,javascriptreact,typescriptreact",
-    "body": ["{{% BLOCKS }}", "<!DOCTYPE html>", "<html lang=\"en\">", "<html>", "\t<head>", "\t\t<meta charset=\"UTF-8\">", "\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">", "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">", "\t\t<title>{{$ title }}My Awesome Site{{/ title }}</title>", "\t\t{{$ stylesheets }}", "\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/default.css\">", "\t\t{{/ stylesheets }}", "\t</head>", "\t\t<header>", "\t\t\t{{$ header }}", "\t\t\t\t<h1>Welcome to My Awesome Site</h1>", "\t\t\t{{/ header }}", "\t\t</header>", "\t\t<div id=\"content\">", "\t\t\t{{$ content }}", "\t\t\t\t<p>Hello, World!</p>", "\t\t\t{{/ content }}", "\t\t</div>", "\t\t{{$ scripts }}", "\t\t\t<script src=\"/assets/js/default.js\"></script>", "\t\t{{/ scripts }}", "\t</body>", "</html>"],
+    "body": [
+      "{{% BLOCKS }}",
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "<html>",
+      "\t<head>",
+      "\t\t<meta charset=\"UTF-8\">",
+      "\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "\t\t<title>{{$ title }}My Awesome Site{{/ title }}</title>",
+      "\t\t{{$ stylesheets }}",
+      "\t\t\t<link rel=\"stylesheet\" href=\"/assets/css/default.css\">",
+      "\t\t{{/ stylesheets }}",
+      "\t</head>",
+      "\t\t<header>",
+      "\t\t\t{{$ header }}",
+      "\t\t\t\t<h1>Welcome to My Awesome Site</h1>",
+      "\t\t\t{{/ header }}",
+      "\t\t</header>",
+      "\t\t<div id=\"content\">",
+      "\t\t\t{{$ content }}",
+      "\t\t\t\t<p>Hello, World!</p>",
+      "\t\t\t{{/ content }}",
+      "\t\t</div>",
+      "\t\t{{$ scripts }}",
+      "\t\t\t<script src=\"/assets/js/default.js\"></script>",
+      "\t\t{{/ scripts }}",
+      "\t</body>",
+      "</html>"
+    ],
     "description": "Mustache snippets"
   }
 }

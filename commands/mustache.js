@@ -1,37 +1,42 @@
-const { parsePath, save } = require('./functions');
+const { l10n } = require('vscode')
+const { parsePath, save } = require('./functions')
 
 module.exports = async (vscode, fs, path, args) => {
-  let resource;
+  let resource
 
   if (vscode.workspace.workspaceFolders) {
-    resource = vscode.workspace.workspaceFolders[0].uri;
+    resource = vscode.workspace.workspaceFolders[0].uri
   }
 
-  const mustacheConfig = vscode.workspace.getConfiguration('mustache', resource);
-  const delimiters = mustacheConfig.get('delimiters');
+  const mustacheConfig = vscode.workspace.getConfiguration('mustache', resource)
+  const delimiters = mustacheConfig.get('delimiters')
 
-  let relativePath = '';
+  let relativePath = ''
 
   if (args) {
-    relativePath = parsePath(vscode, path, args);
+    relativePath = parsePath(vscode, path, args)
   }
 
+  const prompt = l10n.t('Enter filename')
+  const placeHolder = l10n.t('Filename')
+  const validateInputReturn = l10n.t('Invalid format!')
+
   const value = await vscode.window.showInputBox({
-    prompt: 'Filename',
-    placeHolder: 'Filename',
+    prompt,
+    placeHolder,
     validateInput: (text) => {
       if (!/^[A-Za-z0-9][\w\s\/,.-]+$/.test(text)) {
-        return 'Invalid format!';
+        return validateInputReturn
       }
     },
     value: `${relativePath}filename`,
-  });
+  })
 
   if (value.lenght === 0) {
-    return;
+    return
   }
 
-  const filename = value.endsWith('.mustache') ? value : `${value}.mustache`;
+  const filename = value.endsWith('.mustache') ? value : `${value}.mustache`
 
   const content = `${delimiters.left}! ${filename} ${delimiters.right}
 ${delimiters.left}% BLOCKS ${delimiters.right}
@@ -62,7 +67,7 @@ ${delimiters.left}% BLOCKS ${delimiters.right}
 \t\t${delimiters.left}/ scripts ${delimiters.right}
 \t</body>
 </html>
-`;
+`
 
-  save(vscode, fs, path, filename, content);
-};
+  save(vscode, fs, path, filename, content)
+}

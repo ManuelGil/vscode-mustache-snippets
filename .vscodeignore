@@ -1,4 +1,12 @@
+.husky/**
 .vscode/**
 .vscode-test/**
+out/test/**
+docs/**
+.editorconfig
+.gitattributes
 .gitignore
+.yarnrc
+biome.json
+yarn.lock
 vsc-extension-quickstart.md

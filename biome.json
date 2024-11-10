@@ -1,0 +1,65 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "files": { "ignoreUnknown": false, "ignore": [] },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": false,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "bracketSpacing": true,
+    "ignore": [
+      "**/node_modules",
+      "**/build",
+      "**/coverage",
+      "**/.vscode",
+      "**/docs",
+      "**/out"
+    ]
+  },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "complexity": { "useArrowFunction": "off" },
+      "correctness": {
+        "noConstAssign": "warn",
+        "noInvalidConstructorSuper": "warn",
+        "noUndeclaredVariables": "warn",
+        "noUnreachable": "warn",
+        "noUnreachableSuper": "warn",
+        "noUnusedVariables": "warn"
+      },
+      "style": { "useBlockStatements": "off" },
+      "suspicious": { "useValidTypeof": "warn" }
+    },
+    "ignore": [
+      "**/.vscode/",
+      "**/compodoc/",
+      "**/coverage/",
+      "**/docs/",
+      "**/node_modules/",
+      "**/out/",
+      "**/commitlint.config.js",
+      "**/build/"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    }
+  }
+}

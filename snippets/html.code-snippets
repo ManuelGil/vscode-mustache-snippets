@@ -62,7 +62,12 @@
   "figure": {
     "prefix": "figure",
     "scope": "html,mustache,javascriptreact,typescriptreact",
-    "body": ["<figure class=\"$1\">", "\t<img src=\"$2\" alt=\"$3\">", "\t<figcaption>$4</figcaption>", "</figure>"]
+    "body": [
+      "<figure class=\"$1\">",
+      "\t<img src=\"$2\" alt=\"$3\">",
+      "\t<figcaption>$4</figcaption>",
+      "</figure>"
+    ]
   },
   "footer": {
     "prefix": "footer",
@@ -287,7 +292,12 @@
   "picture": {
     "prefix": "picture",
     "scope": "html,mustache,javascriptreact,typescriptreact",
-    "body": ["<picture>", "\t<source srcset=\"$1\" media=\"$2\">", "\t<img src=\"$3\" alt=\"$4\">", "</picture>"]
+    "body": [
+      "<picture>",
+      "\t<source srcset=\"$1\" media=\"$2\">",
+      "\t<img src=\"$3\" alt=\"$4\">",
+      "</picture>"
+    ]
   },
   "section": {
     "prefix": "section",
@@ -467,7 +477,13 @@
   "table-colgroup": {
     "prefix": "table-colgroup",
     "scope": "html,mustache,javascriptreact,typescriptreact",
-    "body": ["<table>", "\t<colgroup>", "\t\t<col span=\"$1\">", "\t</colgroup>", "</table>"]
+    "body": [
+      "<table>",
+      "\t<colgroup>",
+      "\t\t<col span=\"$1\">",
+      "\t</colgroup>",
+      "</table>"
+    ]
   },
   "datalist": {
     "prefix": "datalist",
@@ -487,7 +503,13 @@
   "select-optgroup": {
     "prefix": "select-optgroup",
     "scope": "html,mustache,javascriptreact,typescriptreact",
-    "body": ["<select>", "\t<optgroup label=\"$1\">", "\t\t<option value=\"$2\">$3</option>", "\t</optgroup>", "</select>"]
+    "body": [
+      "<select>",
+      "\t<optgroup label=\"$1\">",
+      "\t\t<option value=\"$2\">$3</option>",
+      "\t</optgroup>",
+      "</select>"
+    ]
   },
   "details": {
     "prefix": "details",

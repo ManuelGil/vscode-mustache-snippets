@@ -2,7 +2,7 @@
   "name": "vscode-mustache-snippets",
   "displayName": "Mustache - Syntax highlighting, snippets, and more",
   "description": "This extension provides Mustache template engine support for Visual Studio Code. It helps you to write your Mustache files with syntax highlighting and code completion.",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "icon": "icon.png",
   "license": "MIT",
   "publisher": "imgildev",
@@ -14,14 +14,9 @@
     "url": "https://github.com/sponsors/manuelgil"
   },
   "engines": {
-    "vscode": "^1.53.0"
+    "vscode": "^1.83.0"
   },
-  "categories": [
-    "Programming Languages",
-    "Snippets",
-    "Formatters",
-    "Other"
-  ],
+  "categories": ["Programming Languages", "Snippets", "Formatters", "Other"],
   "keywords": [
     "autocomplete-functionality",
     "autocomplete",
@@ -48,6 +43,8 @@
     "php",
     "react",
     "reactjs",
+    "svelte",
+    "sveltejs",
     "snippets-collection",
     "snippets-collections",
     "snippets-library",
@@ -83,10 +80,9 @@
   "bugs": {
     "url": "https://github.com/ManuelGil/vscode-mustache-snippets/issues"
   },
-  "activationEvents": [
-    "*"
-  ],
+  "activationEvents": ["*"],
   "main": "./extension.js",
+  "l10n": "./l10n",
   "contributes": {
     "configuration": {
       "id": "Mustache",
@@ -105,16 +101,8 @@
     "languages": [
       {
         "id": "mustache",
-        "aliases": [
-          "Mustache (HTML)",
-          "mustache"
-        ],
-        "extensions": [
-          ".mustache",
-          ".mst",
-          ".mu",
-          ".stache"
-        ],
+        "aliases": ["Mustache (HTML)", "mustache"],
+        "extensions": [".mst", ".mu", ".mustache", ".stache", ".tmpl"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -136,12 +124,12 @@
     "commands": [
       {
         "command": "mustache.new.file",
-        "title": "Generate New Mustache File",
+        "title": "%mustache.new.file%",
         "category": "Mustache"
       },
       {
         "command": "mustache.change.delimiters",
-        "title": "Change Mustache Delimiters",
+        "title": "%mustache.change.delimiters%",
         "category": "Mustache"
       }
     ],
@@ -169,28 +157,26 @@
     ]
   },
   "scripts": {
-    "lint": "eslint --ext .js ./ --fix",
+    "format": "biome format --write ./",
+    "lint": "biome lint --write ./",
+    "lint:check": "biome check --write ./",
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@types/glob": "^7.1.3",
-    "@types/mocha": "^8.0.4",
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.53.0",
-    "eslint": "^8.24.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "glob": "^7.1.6",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "mocha": "^8.3.0",
-    "prettier": "3.0.1",
-    "typescript": "^4.1.3",
-    "vscode-test": "^1.5.0"
+    "@biomejs/biome": "1.9.4",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^22.9.0",
+    "@types/vscode": "^1.83.0",
+    "@vscode/l10n-dev": "^0.0.35",
+    "glob": "^11.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "mocha": "^10.8.2",
+    "typescript": "^5.6.3",
+    "vscode-test": "^1.6.1"
   },
   "lint-staged": {
     "*.(js)": "npm run lint"

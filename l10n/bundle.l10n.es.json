@@ -1,0 +1,15 @@
+{
+  "No text editor is active": "No hay ningún editor de texto activo.",
+  "No text selected": "No hay texto seleccionado",
+  "Enter current left delimiter": "Introduzca el delimitador izquierdo actual",
+  "e.g. {{": "por ejemplo {{",
+  "Enter current right delimiter": "Introduzca el delimitador derecho actual",
+  "e.g. }}": "por ejemplo }}",
+  "The file has not been created!": "¡El archivo no ha sido creado!",
+  "Successfully created the file!": "¡Archivo creado con éxito!",
+  "The file already exists!": "¡El archivo ya existe!",
+  "Enter filename": "Introduzca el nombre del archivo",
+  "Filename": "Nombre del archivo",
+  "Invalid format!": "¡Formato inválido!",
+  "{0}filename": "nombre del archivo"
+}
