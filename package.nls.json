@@ -1,4 +1,5 @@
 {
   "mustache.new.file": "Generate New Mustache File",
-  "mustache.change.delimiters": "Change Mustache Delimiters"
+  "mustache.change.delimiters": "Change Mustache Delimiters",
+  "mustache.delimiters": "The delimiters option can be used to change the current template delimiters when generating a new file. Syntax highlighting or snippets included in the extension will not be affected by this setting."
 }

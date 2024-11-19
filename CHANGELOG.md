@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [2.6.0] - 2024-11-18
+
+### Changed
+
+- Update the Mustache Language definition for improved the syntax highlighting.
+
 ## [2.5.1] - 2024-11-10
 
 ### Fixed
@@ -120,7 +126,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.4.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.6.0...HEAD
+[2.6.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.5.1...v2.6.0
 [2.5.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.5.0...v2.5.1
 [2.5.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.3.2...v2.4.0

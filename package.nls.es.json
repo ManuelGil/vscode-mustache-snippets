@@ -1,4 +1,5 @@
 {
   "mustache.new.file": "Generar Nuevo Archivo Mustache",
-  "mustache.change.delimiters": "Cambiar Delimitadores Mustache"
+  "mustache.change.delimiters": "Cambiar Delimitadores Mustache",
+  "mustache.delimiters": "La opción de delimitadores se puede usar para cambiar los delimitadores de plantilla actuales al generar un nuevo archivo. La resaltado de sintaxis o los fragmentos incluidos en la extensión no se verán afectados por esta configuración."
 }

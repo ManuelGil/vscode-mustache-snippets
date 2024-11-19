@@ -18,12 +18,13 @@
       "begin": "\\{*\\{(#|\\^|\\$)\\s*([A-Za-z0-9_.]+)\\s*\\}\\}*",
       "beginCaptures": {
         "1": { "name": "keyword.control.block.start.mustache" },
-        "2": { "name": "entity.name.block.mustache" }
+        "2": { "name": "entity.name.tag.block.mustache" }
       },
       "end": "\\{*\\{/\\s*([A-Za-z0-9_.]+)\\s*\\}\\}*",
       "endCaptures": {
         "0": { "name": "keyword.control.block.end.mustache" },
-        "1": { "name": "variable.block.mustache" }
+        "1": { "name": "entity.name.tag.block.mustache" },
+        "2": { "name": "entity.name.tag.block.mustache" }
       },
       "patterns": [
         { "include": "$self" },
