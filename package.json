@@ -2,7 +2,7 @@
   "name": "vscode-mustache-snippets",
   "displayName": "Mustache - Syntax highlighting, snippets, and more",
   "description": "This extension provides Mustache template engine support for Visual Studio Code. It helps you to write your Mustache files with syntax highlighting and code completion.",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "icon": "icon.png",
   "license": "MIT",
   "publisher": "imgildev",
