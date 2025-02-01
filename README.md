@@ -26,6 +26,7 @@ Type part of snippet, press `Tab` or `Enter`, and the snippet unfolds. Below is 
 | section          | {{# name }} ... {{/ name }}    |
 | inverted section | {{^ name }} ... {{/ name }}    |
 | comment          | {{! comment }}                 |
+| comment override | {{!-- comment --!}}            |
 | include          | {{> template }}                |
 | extends          | {{\< template }}               |
 

@@ -23,6 +23,12 @@
     "body": ["{{!", "\t$0", "}}"],
     "description": "Mustache snippets"
   },
+  "comment override": {
+    "prefix": ["{{!--", "comment"],
+    "scope": "html,mustache,javascriptreact,typescriptreact",
+    "body": ["{{!--", "\t$0", "--!}}"],
+    "description": "Mustache snippets"
+  },
   "include": {
     "prefix": ["{{>", "include"],
     "scope": "html,mustache,javascriptreact,typescriptreact",
