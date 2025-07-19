@@ -1,7 +1,7 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": [] },
+  "files": { "ignoreUnknown": false, "includes": ["**"] },
   "formatter": {
     "enabled": true,
     "useEditorconfig": false,
@@ -12,16 +12,17 @@
     "lineWidth": 80,
     "attributePosition": "auto",
     "bracketSpacing": true,
-    "ignore": [
-      "**/node_modules",
-      "**/build",
-      "**/coverage",
-      "**/.vscode",
-      "**/docs",
-      "**/out"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/build",
+      "!**/coverage",
+      "!**/.vscode",
+      "!**/docs",
+      "!**/out"
     ]
   },
-  "organizeImports": { "enabled": true },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -33,20 +34,22 @@
         "noUndeclaredVariables": "warn",
         "noUnreachable": "warn",
         "noUnreachableSuper": "warn",
-        "noUnusedVariables": "warn"
+        "noUnusedVariables": "warn",
+        "useValidTypeof": "warn"
       },
       "style": { "useBlockStatements": "off" },
-      "suspicious": { "useValidTypeof": "warn" }
+      "suspicious": {}
     },
-    "ignore": [
-      "**/.vscode/",
-      "**/compodoc/",
-      "**/coverage/",
-      "**/docs/",
-      "**/node_modules/",
-      "**/out/",
-      "**/commitlint.config.js",
-      "**/build/"
+    "includes": [
+      "**",
+      "!**/.vscode/",
+      "!**/compodoc/",
+      "!**/coverage/",
+      "!**/docs/",
+      "!**/node_modules/",
+      "!**/out/",
+      "!**/commitlint.config.js",
+      "!**/build/"
     ]
   },
   "javascript": {

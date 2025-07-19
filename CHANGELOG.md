@@ -6,6 +6,19 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [2.8.0] - 2025-07-18
+
+### Changed
+
+- Update project requirements and configuration sections
+- Improve contributing guidelines and added a Code of Conduct
+- Update `package.json` for version bump and dependency updates
+- Refactor command files for better readability and consistency
+
+### Removed
+
+- Remove outdated test files and added new test structure
+
 ## [2.7.0] - 2025-02-01
 
 ### Added
@@ -132,7 +145,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.7.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.8.0...HEAD
+[2.8.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.7.0...v2.8.0
 [2.7.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.6.0...v2.7.0
 [2.6.0]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.5.1...v2.6.0
 [2.5.1]: https://github.com/ManuelGil/vscode-mustache-snippets/compare/v2.5.0...v2.5.1

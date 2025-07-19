@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
-    "checkJs": false /* Typecheck .js files. */,
-    "lib": ["es6"]
+    "module": "Node16",
+    "target": "ES2022",
+    "checkJs": true /* Typecheck .js files. */,
+    "lib": ["ES2022"]
   },
   "exclude": ["node_modules"]
 }
